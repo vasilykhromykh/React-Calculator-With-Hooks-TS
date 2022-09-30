@@ -1,4 +1,4 @@
-#React Calculator With React Hooks
+# React Calculator
 
 Now moved to typescript!
 Calculator made by using hooks(no more class components!) https://vasilykhromykh.github.io/React-Calculator-With-React-Hooks/
