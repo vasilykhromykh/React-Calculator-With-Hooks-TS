@@ -16,7 +16,7 @@ function App() {
     setCalculation(calculation+value)
 
     if (!actions.includes(value)){
-      setOutput(eval(calculation+value).toString())
+      setOutput(eval(calculation+value).toString().replace('@','/'))
     }
 
   }
@@ -31,7 +31,7 @@ function App() {
     return digits
   }
   const calculate=()=>{
-    setCalculation(eval(calculation).toString())
+    setCalculation(eval(calculation.replace('÷', '/' ).replace( '×', '*')).toString())
   }
   const clear=()=>{
     if(calculation === ''){
@@ -48,7 +48,7 @@ function App() {
         <div className="calc-grid">
           <div className='output'>
             {calculation||'0'}
-            {output ? <span className="preRes">{output}</span>:''}
+
 
 
           </div>
@@ -56,8 +56,8 @@ function App() {
           <div>
             <div className='ops'>
 
-              <button onClick={()=>{updateCalculation('/')}} >/</button>
-              <button onClick={()=>{updateCalculation('*')}}>*</button>
+              <button onClick={()=>{updateCalculation('÷')}} >÷</button>
+              <button onClick={()=>{updateCalculation('×')}}>×</button>
               <button onClick={()=>{updateCalculation('+')}}>+</button>
               <button onClick={()=>{updateCalculation('-')}}>-</button>
               <button onClick={clear}> <img  width={40} height={40} src="https://cdn-icons-png.flaticon.com/512/159/159805.png" /></button>
@@ -68,7 +68,7 @@ function App() {
 
               <button onClick={()=>{updateCalculation('.')}}>.</button>
               <button onClick={()=>{updateCalculation('0')}}>0</button>
-              <button onClick={calculate}>=</button>
+              <button style={{backgroundColor:'orange'}} onClick={calculate}>=</button>
             </div>
           </div>
 
