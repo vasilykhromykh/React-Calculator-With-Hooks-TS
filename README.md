@@ -3,4 +3,4 @@
 # Now moved to typescript!
 
 Calculator made by using hooks(no more class components!) https://vasilykhromykh.github.io/React-Calculator-With-React-Hooks/
-![image](https://user-images.githubusercontent.com/71073510/193308489-ce0d5095-5bfd-4fcb-a13f-4ef75a705f55.png)
+![image](https://user-images.githubusercontent.com/71073510/200909161-079e2995-7536-47bc-86fc-628d6766c205.png)
